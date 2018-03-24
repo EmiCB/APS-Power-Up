@@ -6,3 +6,6 @@ Steps:
 Stuff:
 - All measurements are in inches and degrees
 - Each j case is an auto, each i case is a step of auto
+- Positions are scale, switch robot as of right now (ex. 'LRC' = left scale, right switch, center start)
+
+- case 2 works best rn
