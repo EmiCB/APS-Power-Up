@@ -1,0 +1,8 @@
+Steps:
+1. go into the PowerUp.js file
+2. find "//AUTOS HERE" (line 440 right now)
+3. change values or make new paths
+
+Stuff:
+- All measurements are in inches and degrees
+- Each j case is an auto, each i case is a step of auto
