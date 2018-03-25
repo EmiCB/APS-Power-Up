@@ -2,31 +2,31 @@
 
 	var screenWidth = 960;
 	var screenHeight = 1280;
-	var k=2;										// scaling for field (twice as many pixel as inches IRL)
-	var robotCenter = [204, 406 - 36];				// center of the front of the robot (in inches from upper left corner)
-	var LEFTSTART = [48 + 15.75, 406 - 36];			// farthest left starting position for robot
+	var k=2;																			// scaling for field (twice as many pixel as inches IRL)
+	var robotCenter = [204, 406 - 36];						// center of the front of the robot (in inches from upper left corner)
+	var LEFTSTART = [48 + 15.75, 406 - 36];				// farthest left starting position for robot
 	var CENTERSTART = [180 - 12 + 36, 406 - 36];	//center of center starting position for robot
-	var RIGHTSTART = [312 - 15.75, 406 - 36];		//farthest right starting position for robot
+	var RIGHTSTART = [312 - 15.75, 406 - 36];			//farthest right starting position for robot
 	var canvas;
 	var ctx;
 	var i = 0;
 	var j = 0;
-	var x = 204;					// initial coordinates for front center of robot
+	var x = 204;										// initial coordinates for front center of robot
 	var y = 370;
-	var next_x = 204;				// robot coordinates incremented
+	var next_x = 204;								// robot coordinates incremented
 	var next_y = 370;
-	var c;							// click event
-	var m;							// scaling for actual robot distance
+	var c;													// click event
+	var m;													// scaling for actual robot distance
 	var cursorPosition = [0,0];
-	var startPosition = [0,0];		// center of the front of the robot at beginning of route
-	var lastPosition = [0,0];		// center of the front of the robot at end of route
-	var forwardDistance = 0;		//distance in feet robot should travel forward
+	var startPosition = [0,0];			// center of the front of the robot at beginning of route
+	var lastPosition = [0,0];				// center of the front of the robot at end of route
+	var forwardDistance = 0;				//distance in feet robot should travel forward
 	var distance = 0;
-	var angleTurnRight = 0;			//angle in degrees robot should turn clockwise
+	var angleTurnRight = 0;					//angle in degrees robot should turn clockwise
 	var angle = 0;
 	var interval;
 	var ready = false;
-	var driving = false;			//is robot driving?
+	var driving = false;						//is robot driving?
 
 drawField();
 leftScale();
@@ -99,6 +99,7 @@ function drawField()
 		//front cube in PC zone
 				ctx.strokeRect(173*k,294*k,14*k,14*k);	//middle of bottom of P zone
 	}
+
 
 function leftScale()
 	{
