@@ -4,12 +4,28 @@ var screenWidth = 960;
 var screenHeight = 1280;
 var m;
 
-rightSwitchAllied();
-rightScale();
-rightSwitchEnemy();
-leftSwitchAllied();
-leftScale();
-leftSwitchEnemy();
+var gameData = ["L","R","L"];
+
+
+if(gameData[0] == "R") {
+	rightSwitchAllied();
+}
+else if(gameData[0] == "L") {
+	leftSwitchAllied();
+}
+if(gameData[1] == "R") {
+	rightScale();
+}
+else if(gameData[1] == "R") {
+	leftScale();
+}
+if(gameData[2] == "R") {
+	rightSwitchEnemy();
+}
+else if(gameData[2] == "L") {
+	leftSwitchEnemy();
+}
+
 
 function rightSwitchAllied()
 	{
