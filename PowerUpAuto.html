@@ -13,7 +13,7 @@
 
 <body>
 	<header>
-				
+
 		<div id="rules" style="top:270px;left:750px;zIndex:200;display:none">
 			<p>
 				Choose an autonomous route.
@@ -27,7 +27,7 @@
             x="0" y="0"
             width="14" height="14"
             fill="yellow" fill-opacity="0.5" stroke="purple" stroke-width="1" />
-            
+
         <g id="robot" fill="blue" fill-opacity="0.6" stroke="purple" stroke-width="1" >
     		<rect x="0" y="-15.75" width="36" height="31.5" />
     		<line x1="-12" y1="-7" x2="0" y2="-7" style="stroke:blue;stroke-width:2" />
@@ -58,30 +58,30 @@
    		<rect x="419.65" y="89.88" width="48" height="36" id="1R" style="fill:gray;fill-opacity:0.3;stroke:purple;stroke-width:1" />
   		<rect x="419.65" y="233.88" width="48" height="36" id="1L" style="fill:gray;fill-opacity:0.3;stroke:purple;stroke-width:1" />
     <!-- reference resourses by ID in xlink:href attribute -->
-    <use xlink:href="#cubes" transform="translate(218 173)"/> <!-- red power cubes -->    
+    <use xlink:href="#cubes" transform="translate(218 173)"/> <!-- red power cubes -->
     <use xlink:href="#cubes" transform="translate(232 166)"/>
     <use xlink:href="#cubes" transform="translate(232 180)"/>
-    <use xlink:href="#cubes" transform="translate(232 173)"/>    
+    <use xlink:href="#cubes" transform="translate(232 173)"/>
     <use xlink:href="#cubes" transform="translate(246 159)"/>
     <use xlink:href="#cubes" transform="translate(246 166)"/>
     <use xlink:href="#cubes" transform="translate(246 173)"/>
     <use xlink:href="#cubes" transform="translate(246 180)"/>
     <use xlink:href="#cubes" transform="translate(246 187)"/>
-    
+
     <use xlink:href="#cubes" transform="translate(316 103.56)"/> <!-- red cubes along switch -->
     <use xlink:href="#cubes" transform="translate(316 131.34)"/>
     <use xlink:href="#cubes" transform="translate(316 159.11)"/>
     <use xlink:href="#cubes" transform="translate(316 186.89)"/>
     <use xlink:href="#cubes" transform="translate(316 214.66)"/>
     <use xlink:href="#cubes" transform="translate(316 242.44)"/>
-  	
+
     <use xlink:href="#cubes" transform="translate(558 103.56)"/> <!-- blue cubes along switch -->
     <use xlink:href="#cubes" transform="translate(558 131.34)"/>
     <use xlink:href="#cubes" transform="translate(558 159.11)"/>
     <use xlink:href="#cubes" transform="translate(558 186.89)"/>
     <use xlink:href="#cubes" transform="translate(558 214.66)"/>
     <use xlink:href="#cubes" transform="translate(558 242.44)"/>
-		
+
  	<use xlink:href="#cubes" transform="translate(628 159)"/> <!-- blue power cubes -->
     <use xlink:href="#cubes" transform="translate(628 166)"/>
     <use xlink:href="#cubes" transform="translate(628 173)"/>
@@ -89,9 +89,9 @@
     <use xlink:href="#cubes" transform="translate(628 187)"/>
     <use xlink:href="#cubes" transform="translate(642 166)"/>
     <use xlink:href="#cubes" transform="translate(642 180)"/>
-    <use xlink:href="#cubes" transform="translate(642 173)"/>    
+    <use xlink:href="#cubes" transform="translate(642 173)"/>
     <use xlink:href="#cubes" transform="translate(656 173)"/>
-	
+
 	<use xlink:href="#robot" transform="translate(732 63.75)"/>
 
 	<use xlink:href="#robot" transform="translate(732 63.75)">
@@ -102,7 +102,7 @@
             additive="sum"
             begin="0s"
             dur="3s"
-            
+
             attributeName="transform" type="rotate"
             values="0 0 0; 90 0 0"
             additive="sum"
@@ -115,13 +115,13 @@
         style="stroke: #ff0000; fill: none;">
       <animateMotion
               path="M732,63.75 l-265,0 a23,23 0 0,0 -23,23 a23,-23 0 0,0 -23,-23  l90,0 a23,23 0 0,1 23,23 a23,23 0 0,0 23,23"
-              begin="0s" dur="10s" 
+              begin="0s" dur="10s"
               rotate="auto"
               />
   </rect>
 </svg>
 
-		
+
 		<div id="Buttons" style="position:absolute;left:750px;top:100px;zIndex:200;">
 <!--			<form action="/action_page.php">
 			  <select name="drive">
@@ -131,7 +131,7 @@
 			  <br><br>
 			  <input type="submit">
 			</form>
-			
+
 			<form action="/action_page.php">
  				 First name:<br>
 				  <input type="text" name="firstname" value="Mickey"><br>
@@ -139,7 +139,7 @@
  					 <input type="text" name="lastname" value="Mouse"><br><br>
 					  <input type="submit" value="Submit">
 			</form>
-			
+
 				<use xlink:href="#robot">
         <animateTransform
             attributeName="transform" type="translate"
@@ -156,23 +156,21 @@
 			<button id="LLCButton" class="center" type="button" style="display:none" onmousedown="chooseRoute(5)">Left Scale, Left Switch</button>
 			<button id="LRLButton" class="left" type="button" style="display:none" onmousedown="chooseRoute(3)">Left Scale, Right Switch</button>
 			<button id="LRRButton" class="right" type="button" style="display:none" onmousedown="chooseRoute(5)">Left Scale, Right Switch</button>
-			<button id="LRCButton" class="center" type="button" style="display:none" onmousedown="chooseRoute(5)">Left Scale, Right Switch</button>  
-			<button id="RLLButton" class="left" type="button" style="display:none" onmousedown="chooseRoute(5)">Right Scale, Left Switch</button>  
-			<button id="RLRButton" class="right" type="button" style="display:none" onmousedown="chooseRoute(4)">Right Scale, Left Switch</button>  
-			<button id="RLCButton" class="center" type="button" style="display:none" onmousedown="chooseRoute(5)">Right Scale, Left Switch</button>  
-			<button id="RRLButton" class="left" type="button" style="display:none" onmousedown="chooseRoute(5)">Right Scale, Right Switch</button>  
-			<button id="RRRButton" class="right" type="button" style="display:none" onmousedown="chooseRoute(1)">Right Scale, Right Switch</button>  
-			<button id="RRCButton" class="center" type="button" style="display:none" onmousedown="chooseRoute(5)">Right Scale, Right Switch</button> 
-			<br><br> 
-			<button id="StartButton" class="center" type="button" style="display:none;color:orange" onclick="chooseStart()">Choose a new start position</button>  
+			<button id="LRCButton" class="center" type="button" style="display:none" onmousedown="chooseRoute(5)">Left Scale, Right Switch</button>
+			<button id="RLLButton" class="left" type="button" style="display:none" onmousedown="chooseRoute(5)">Right Scale, Left Switch</button>
+			<button id="RLRButton" class="right" type="button" style="display:none" onmousedown="chooseRoute(4)">Right Scale, Left Switch</button>
+			<button id="RLCButton" class="center" type="button" style="display:none" onmousedown="chooseRoute(5)">Right Scale, Left Switch</button>
+			<button id="RRLButton" class="left" type="button" style="display:none" onmousedown="chooseRoute(5)">Right Scale, Right Switch</button>
+			<button id="RRRButton" class="right" type="button" style="display:none" onmousedown="chooseRoute(1)">Right Scale, Right Switch</button>
+			<button id="RRCButton" class="center" type="button" style="display:none" onmousedown="chooseRoute(5)">Right Scale, Right Switch</button>
+			<br><br>
+			<button id="StartButton" class="center" type="button" style="display:none;color:orange" onclick="chooseStart()">Choose a new start position</button>
 		</div>
-		
-		
+
+
 
 		<script type="text/javascript" src='PowerUpAuto.js'></script>
 
 	</header>
 </body>
 </html>
-	
-	
